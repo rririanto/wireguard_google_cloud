@@ -189,11 +189,11 @@ create the client conf:
 echo "[Interface] #${wgclient}
 Address = 10.200.200.2/32
 MTU = 1460
-PrivateKey = $(cat 'keys/${wgclient}_privatekey')
+PrivateKey = $(cat keys/${wgclient}_privatekey)
 DNS = 1.1.1.1
 
 [Peer]
-PublicKey = $(cat 'keys/server_publickey')
+PublicKey = $(cat keys/server_publickey)
 Endpoint = 13.84.227.135:51820
 AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 21" > clients/${wgclient}.conf
